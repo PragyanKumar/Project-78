@@ -12,28 +12,26 @@
     <script>
            var image= 
            [
-           "https://media.istockphoto.com/photos/mother-holding-her-sleeping-baby-boy-picture-id171354057?k=6&m=171354057&s=170667a&w=0&h=zc2G2dD-fZIV45HJydCGN8X7bGZFl87VJR8-Jye9r_g=",
             "https://s-i.huffpost.com/gen/1851116/images/o-DADS-facebook.jpg", 
             "https://s-i.huffpost.com/gen/2357796/images/o-GRANDPA-CHEESE-facebook.jpg",
             "http://thumbs.dreamstime.com/z/grandma-grandchildren-2404247.jpg"
            ];
 
-            var names 
+            var names=
             [
-                Ananya_Guha, Prasun_Kumar_Guha, Pradeep_Kumar_Guha, Aloka_Chaudhari
+                "Prasun_Kumar_Guha", "Pradeep_Kumar_Guha", "Aloka_Chaudhari"
             ];
 
         var i=0;
         function update(){
             i++;
-            var number_of_members_in_family_array = 4;
-            if ( i > number_of_members_in_family_array) {
+            var number_of_members_in_family_array = 3;
+            if ( i > number_of_members_in_family_array-1) {
                 i=0;
             }
-            var updateImage=images[i];
-            var updateName=names[i];
-            document.getElementById("family_member_image").src=updateImage;
-            document.getElementById("family_member_names").src=updateName;
+            
+            document.getElementById("family_member_image").src=image[i];
+            document.getElementById("family_member_name").innerHTML=names[i];
         }
        </script>     
 </body>
